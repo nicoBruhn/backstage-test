@@ -21,6 +21,7 @@ spec:
     - title: Authentication
       required:
         - appTokenDefault
+        - azureAdToken
       properties:
         appTokenDefault:
           type: string
@@ -32,6 +33,16 @@ spec:
             sessionKey: 'backstagetest{"environmentType"}'
             title: 'AuthToken'
             message: Login field for token used to access to backstage-test environment
+        azureAdToken:
+          type: string
+          title: "azureADtoken"
+          ui:field: EntraOAuthToken
+          ui:options:
+            scopes:
+              - 'api://d96759a6-9b63-4819-b77c-d831d30c9ac6/azuread/.default'
+            sessionKey: 'azuread'
+            title: 'azuread'
+            message: Login field for token used to access to fake azuread
 
     - title: dummy 
       required:
