@@ -22,7 +22,7 @@ spec:
       required:
         - appTokenDefault
       properties:
-        inventoryToken:
+        appTokenDefault:
           type: string
           title: "AuthToken"
           ui:field: EntraOAuthToken
@@ -46,3 +46,9 @@ spec:
             - test3
           default: test1
             
+  steps:
+    - id: log-inventory-token
+      name: Log Inventory Token
+      action: log:log
+      input:
+        message: 'The provided inventory token is: {{ parameters.inventoryToken }}'
