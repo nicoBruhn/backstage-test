@@ -1,0 +1,10 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-test-component
+  title: Test Component
+  description: Deployment of component
+  namespace: default
+spec:
+  type: service

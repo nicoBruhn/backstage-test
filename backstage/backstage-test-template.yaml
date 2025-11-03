@@ -1,0 +1,48 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: auth-test
+  title: Auth Test
+spec:
+  type: service
+  parameters:
+    - title: Select Environment
+      required:
+        - environmentType
+      properties:
+        environmentType:
+          type: string
+          title: Environment Type
+          enum:
+            - dev
+            - test
+            - prod
+          default: dev
+    - title: Authentication
+      required:
+        - appTokenDefault
+      properties:
+        inventoryToken:
+          type: string
+          title: "AuthToken"
+          ui:field: EntraOAuthToken
+          ui:options:
+            scopes:
+              - 'api://backstage-test-{"environmentType"}/.default'
+            sessionKey: 'backstagetest{"environmentType"}'
+            title: 'AuthToken'
+            message: Login field for token used to access to backstage-test environment
+
+    - title: dummy 
+      required:
+        - testField 
+      properties:
+        testField:
+          type: string
+          title: Select Type
+          enum:
+            - test1
+            - test2
+            - test3
+          default: test1
+            

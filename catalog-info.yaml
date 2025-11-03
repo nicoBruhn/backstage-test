@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: backstage-test-location
+  description: Automatically include all yaml files in the directory /backstage of the current repository
+spec:
+  target: ./backstage/*
