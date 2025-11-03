@@ -28,7 +28,7 @@ spec:
           ui:field: EntraOAuthToken
           ui:options:
             scopes:
-              - 'api://api://d96759a6-9b63-4819-b77c-d831d30c9ac6/backstage-api-{"environmentType"}/.default'
+              - 'api://d96759a6-9b63-4819-b77c-d831d30c9ac6/backstage-api-{"environmentType"}/.default'
             sessionKey: 'backstagetest{"environmentType"}'
             title: 'AuthToken'
             message: Login field for token used to access to backstage-test environment
