@@ -19,7 +19,21 @@ spec:
             - test
             - prod
           default: dev
-    - title: Authentication
+    - title: Authentication ad
+      required:
+        - azureAdToken
+      properties:
+        azureAdToken:
+          type: string
+          title: "azureADtoken"
+          ui:field: EntraOAuthToken
+          ui:options:
+            scopes:
+              - 'api://d96759a6-9b63-4819-b77c-d831d30c9ac6/azuread/.default'
+            sessionKey: 'azuread'
+            title: 'azuread'
+            message: Login field for token used to access to fake azuread
+    - title: Authentication backstage
       required:
         - appTokenDefault
       properties:
